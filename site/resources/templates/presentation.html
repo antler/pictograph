@@ -1,0 +1,8 @@
+{{< templates/layout.html}}
+{{%body}}
+<h1>{{presentation.title}}</h1>
+{{#presentation.slides}}
+<a href="{{route-for :slide {:title presentation.title :slide title} }}"><img src="{{resize image {:height 200} }}" /></a>
+{{/presentation.slides}}
+{{/body}}
+
