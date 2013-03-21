@@ -3,5 +3,7 @@
 <h1>{{slide.title}}</h1>
 <img src="{{resize slide.image {:height 500} }}" />
 <h2>{{slide.caption}}</h2>
+{{#previous}}<p><<< <a href="{{route-for :slide {:title slide.presentation.title :slide previous.title} }}">{{previous.title}}</a></p>{{/previous}}
+{{#following}}<p><a href="{{route-for :slide {:title slide.presentation.title :slide following.title} }}">{{following.title}}</a> >>></p>{{/following}}
 {{/body}}
 
